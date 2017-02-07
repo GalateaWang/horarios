@@ -4,49 +4,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title> Horários - IFPB Campus Guarabira </title>
 	<link rel="stylesheet" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<!-- <link rel="icon" type="image/png" sizes="141x187" href="images/if_SYMBOL.png"> -->
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="apple-touch-icon" href="images/favicon.ico">
-	<title> Horários - IFPB Campus Guarabira </title>
 	<meta name="keywords" content="horários, ifpb, guarabira, campus, professor, aluno">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
-<style>
-  html,body,h1,h2,h3,h4,h5,h6 {font-family: 'Open Sans', sans-serif;}
- </style>
-  {% for curso  in site.data.horarios.cursos %}
-  
-  <h2> {{curso.nome}} </h2>
-    {% for turma in curso.turmas %}
-      <h3> {{turma.nome}} </h3>
-  <div class="table-responsive"> 
-   
-  <table class="table table-bordered"> 
-      <tr> 
-        {% for coluna in turma.colunas %}
-        <th> {{coluna}} </th>
-        {% endfor %}
-     </tr>
-        
-        {% for linha in turma.linhas %}
-        <tr>
-          <td> <b> {{linha.horario}} </b> </td>
-          {% if linha.aulas[0].disciplina == "INTERVALO" or linha.aulas[0].disciplina == "ALMOÇO" or linha.aulas[0].disciplina == "JANTAR" %}
-	<td colspan="5"> {{linha.aulas[0].disciplina}} </td>
-	{% else %}
-	{% for aula in linha.aulas %}
-          <td> <b>{{aula.disciplina}} </b> <br/> {{aula.professor}} </td>
-          {% endfor %}
-        </tr>
-        {% endfor %}
-	  
-    </table>
-    </div>
-    {% endfor %}
-  {% endfor %}
-  </body>
+	<style>
+  		html,body,h1,h2,h3,h4,h5,h6 {
+			font-family: 'Open Sans', sans-serif;
+		}
+ 	</style>
+  	{% for curso  in site.data.horarios.cursos %}
+  		<h2> {{curso.nome}} </h2>
+    		{% for turma in curso.turmas %}
+      			<h3> {{turma.nome}} </h3>
+  			<div class="table-responsive"> 
+  				<table class="table table-bordered"> 
+      					<tr> 
+       						{% for coluna in turma.colunas %}
+        						<th> {{coluna}} </th>
+        					{% endfor %}
+     					</tr>
+        				{% for linha in turma.linhas %}
+        					<tr>
+          						<td> <b> {{linha.horario}} </b> </td>
+          						{% if linha.aulas[0].disciplina == "INTERVALO" 
+							or linha.aulas[0].disciplina == "ALMOÇO"
+							or linha.aulas[0].disciplina == "JANTAR" %}
+								<td colspan="5"> {{linha.aulas[0].disciplina}} </td>
+							{% else %}
+								{% for aula in linha.aulas %}
+          								<td> <b>{{aula.disciplina}} </b> <br/> {{aula.professor}} </td>
+          							{% endfor %}
+							{% endif %}
+        					</tr>
+        				{% endfor %}
+    				</table>
+    			</div>
+		{% endfor %}
+	{% endfor %}
+</body>
 </html>
 
