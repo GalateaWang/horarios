@@ -5,11 +5,11 @@
 
 <table>
   {% for row in site.data.horarios %}
-    <tr>
-    {% for item in row %}
-      <td>
-        {{ item }}
-      </td>
+    <tr> <!-- linha -->
+    {% for i tem in row %}
+      <td> <!-- coluna  -->
+        {{ site.data.turma }}
+      </td> 
     {% endfor %}
     </tr>
   {% endfor %}
