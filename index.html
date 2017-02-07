@@ -1,9 +1,13 @@
 ---
 ---
 
-
-
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
   {% for curso  in site.data.horarios.cursos %}
   
   <h1> {{curso.nome}} </h1>
@@ -27,4 +31,6 @@
   </table>
     {% endfor %}
   {% endfor %}
+  </body>
+</html>
 
