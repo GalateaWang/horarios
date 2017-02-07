@@ -6,9 +6,19 @@
 /*# sourceMappingURL=bootstrap.min.css.map */
 
 h2 {
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 h2, h3, td, th {
   text-align: center;
 }
+
+#horario{
+  vertical-align: center;
+  font-weight: bold;
+}
+
+.disciplina{
+  font-weight: bold;
+}
+  
