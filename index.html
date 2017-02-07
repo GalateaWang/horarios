@@ -31,7 +31,7 @@
      					</tr>
         				{% for linha in turma.linhas %}
         					<tr>
-          						<td align=center> <b> {{linha.horario}} </b> </td>
+          						<td valign=center> <b> {{linha.horario}} </b> </td>
           						{% if linha.aulas[0].disciplina == "INTERVALO" 
 							or linha.aulas[0].disciplina == "ALMOÇO"
 							or linha.aulas[0].disciplina == "JANTAR" %}
