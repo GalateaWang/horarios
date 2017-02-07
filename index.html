@@ -12,7 +12,9 @@
   
   <h1> {{curso.nome}} </h1>
     {% for turma in curso.turmas %}
-      <h2> {{turma.nome}} </h2> 
+      <h2> {{turma.nome}} </h2>
+  <div class="table-responsive"> 
+   
   <table class="table table-bordered"> 
       <tr> 
         {% for coluna in turma.colunas %}
@@ -28,7 +30,8 @@
           {% endfor %}
         </tr>
         {% endfor %} 
-  </table>
+    </table>
+    </div>
     {% endfor %}
   {% endfor %}
   </body>
