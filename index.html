@@ -10,14 +10,13 @@
     {% for turma in curso.turmas %}
       <h2> {{turma.nome}} </h2> 
   <table> 
-    <tr> 
-      {% for coluna in turma.colunas %}
-      <th> {{coluna}} </th>
-      {% endfor %}
+      <tr> 
+        {% for coluna in turma.colunas %}
+        <th> {{coluna}} </th>
+        {% endfor %}
      </tr>
-
-
-
+    <td>
+      {{turma.linhas}}
   </table>
     {% endfor %}
   {% endfor %}
