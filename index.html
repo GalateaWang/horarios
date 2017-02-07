@@ -33,12 +33,16 @@
         
         {% for linha in turma.linhas %}
         <tr>
-          <td>{{linha.horario}}</td>
-          {% for aula in linha.aulas %}
-          <td> <span id="disciplina">{{aula.disciplina}} </span> <br/> {{aula.professor}} </td>
+          <td> <b> {{linha.horario}} </b> </td>
+          {% if linha.aulas[0].disciplina == "INTERVALO" or linha.aulas[0].disciplina == "ALMOÇO" or linha.aulas[0].disciplina == "JANTAR" %}
+	<td colspan="5"> {{linha.aulas[0].disciplina}} </td>
+	{% else %}
+	{% for aula in linha.aulas %}
+          <td> <b>{{aula.disciplina}} </b> <br/> {{aula.professor}} </td>
           {% endfor %}
         </tr>
-        {% endfor %} 
+        {% endfor %}
+	  
     </table>
     </div>
     {% endfor %}
