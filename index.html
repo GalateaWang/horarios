@@ -6,9 +6,9 @@
 <table>
   {% for row in site.data.horarios %}
     <tr> <!-- linha -->
-    {% for i tem in row %}
+    {% for item in row %}
       <td> <!-- coluna  -->
-        {{ site.data.turma }}
+        {{ item  }}
       </td> 
     {% endfor %}
     </tr>
