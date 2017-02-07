@@ -3,3 +3,14 @@
 
 <h1> {{site.data.horarios}} </h1>
 
+<table>
+  {% for row in site.data.horarios %}
+    <tr>
+    {% for item in row %}
+      <td>
+        {{ item }}
+      </td>
+    {% endfor %}
+    </tr>
+  {% endfor %}
+</table> 
