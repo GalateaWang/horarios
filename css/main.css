@@ -25,4 +25,22 @@ h2, h3, td, th {
 .disciplina{
 	font-weight: bold;
 }
+
+.titulo-tabela{
+	background-color: #388E3C;
+    	color: #FFFFFF;
+}
+
+.break{
+	background-color: #4CAF50;
+    	color: #FFFFFF;
+	letter-spacing: 10px;
+}
+
+.refeicao{
+	background-color: #FF5252;
+    	color: #FFFFFF;
+	letter-spacing: 10px;
+}
+
   
