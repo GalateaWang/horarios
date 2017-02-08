@@ -24,21 +24,21 @@
         						<th> {{coluna}} </th>
         					{% endfor %}
      					</tr>
-        				{% for linha in turma.linhas %}
-        					<tr>
-          						<td id="horario", class="titulo-tabela"> {{linha.horario}} </td>
-          						{% if linha.aulas[0].disciplina == "ALMOÇO"
-							or linha.aulas[0].disciplina == "JANTAR" %}
-								<td colspan="5"> <span class="refeicao"> {{linha.aulas[0].disciplina}} </span> </td>
-							{% else %} {% if linha.aulas[0].disciplina == "INTERVALO" %}
-								<td colspan="5"> <span class="break"> {{linha.aulas[0].disciplina}} </span> </td>
-							{% else %}
-								{% for aula in linha.aulas %}
-          								<td> <span class="disciplina"> {{aula.disciplina}} </span> <br/> {{aula.professor}} </td>
-          							{% endfor %}
-							{% endif %}
-        					</tr>
-        				{% endfor %}
+						{% for linha in turma.linhas %}
+          					<tr>
+           						<td id="horario"> {{linha.horario}} </td>
+           						<td id="horario", class="titulo-tabela"> {{linha.horario}} </td>
+            						{% if linha.aulas[0].disciplina == "INTERVALO" 
+  							or linha.aulas[0].disciplina == "ALMOÇO"
+  							or linha.aulas[0].disciplina == "JANTAR" %}
+ 								<td colspan="5"> <span class="break"> {{linha.aulas[0].disciplina}} </span> </td>
+ 							{% else %}
+ 								{% for aula in linha.aulas %}
+           								<td> <span class="disciplina"> {{aula.disciplina}} </span> <br/> {{aula.professor}} </td>
+           							{% endfor %}
+ 							{% endif %}
+         					</tr>
+         				{% endfor %}
     				</table>
     			</div>
 		{% endfor %}
