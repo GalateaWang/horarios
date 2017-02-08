@@ -31,13 +31,12 @@
 			font-family: 'Open Sans', sans-serif;
 		}
  	</style>
-	  <header>
+<header>
       <h1 class="float-l", class="letra-branca">
         Horários - IFPB Campus Guarabira 
       </h1>
-      
      
-      <label for="control-nav" class="control-nav"></label>
+     <label for="control-nav" class="control-nav"></label>
       <label for="control-nav" class="control-nav-close"></label>
 
       <nav class="float-r", class="letra-branca">
@@ -56,7 +55,7 @@
           </li>
         </ul>
       </nav>
-    </header>
+</header>
 	{% for curso  in site.data.horarios.cursos %}
   		<h2> {{curso.nome}} </h2>
     		{% for turma in curso.turmas %}
