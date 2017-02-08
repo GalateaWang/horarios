@@ -6,23 +6,23 @@
 /*# sourceMappingURL=bootstrap.min.css.map */
 
 *{
-		font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 h2 {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 h2, h3, td, th {
-  text-align: center;
+	text-align: center;
 }
 
 #horario{
-  vertical-align: center;
-  font-weight: bold;
+	vertical-align: center;
+	font-weight: bold;
 }
 
 .disciplina{
-  font-weight: bold;
+	font-weight: bold;
 }
   
