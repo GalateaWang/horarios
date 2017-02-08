@@ -49,6 +49,8 @@ h2, h3, td, th {
 .formatar-tabela{
 	margin-right: 50px;
 	margin-left: 50px;
+	padding-left:50px;
+	padding-right:50px;
 }
 
 
