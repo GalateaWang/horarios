@@ -18,14 +18,11 @@ h2, h3, td, th {
 	font-weight: bold;
 }
 
-.disciplina{
-	font-weight: bold;
-}
-
 .titulo-tabela{
 	background-color: #388E3C;
     	color: #FFFFFF;
 	font-weight: bold;
+	font-size: 14px;
 }
 
 .break{
@@ -33,6 +30,16 @@ h2, h3, td, th {
     	color: #FFFFFF;
 	font-weight: bold;
 	letter-spacing: 15px;
+	font-size: 14px;
+}
+
+.disciplina {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.professor {
+	font-size: 10px;
 }
 
 
