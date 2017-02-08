@@ -38,7 +38,7 @@
 								<td colspan="5" class="break"> {{linha.aulas[0].disciplina}} </td>
 							{% else %}
 								{% for aula in linha.aulas %}
-          								<td> <span class="disciplina"> {{aula.disciplina}} </span> <br/> <span class="professor"> {{aula.professor}} </span> </td>
+          								<td class="celula"> <span class="disciplina"> {{aula.disciplina}} </span> <br/> <span class="professor"> {{aula.professor}} </span> </td>
           							{% endfor %}
 							{% endif %}
         					</tr>
