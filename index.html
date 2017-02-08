@@ -35,7 +35,7 @@
           						{% if linha.aulas[0].disciplina == "INTERVALO" 
 							or linha.aulas[0].disciplina == "ALMOÇO"
 							or linha.aulas[0].disciplina == "JANTAR" %}
-								<td colspan="5"> <span class="disciplina"> {{linha.aulas[0].disciplina}} </span> </td>
+								<td colspan="5"> <span class="break"> {{linha.aulas[0].disciplina}} </span> </td>
 							{% else %}
 								{% for aula in linha.aulas %}
           								<td> <span class="disciplina"> {{aula.disciplina}} </span> <br/> {{aula.professor}} </td>
