@@ -13,7 +13,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
-  	{% for curso  in site.data.horarios.cursos %}
+  	<style>
+  		html,body,h1,h2,h3,h4,h5,h6 {
+			font-family: 'Open Sans', sans-serif;
+		}
+ 	</style>
+	{% for curso  in site.data.horarios.cursos %}
   		<h2> {{curso.nome}} </h2>
     		{% for turma in curso.turmas %}
       			<h3> {{turma.nome}} </h3>
