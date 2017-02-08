@@ -23,11 +23,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 .list-auto, .list-auto li { width: 100%; float: left; display: block; position: relative; }
 .list-auto, .list-auto li { width: auto; }
 
-.letra-branca {
- 	font-family: 'Open Sans', sans-serif;
-	color: #ffffff;
-  
-}
+
 
 header {
   min-height: 120px;
@@ -41,7 +37,6 @@ header {
 }
 
 header h1 {
-	padding: 15px 0 0 10px;
 	color: white;
 }
 
