@@ -46,9 +46,6 @@ h2, h3, td, th {
 	background-color: #e8f5e9;
 }
 
-.formatar-tabela{
-	margin-right: 50px;
-	margin-left: 50px;
-	padding-left:50px;
-	padding-right:50px;
+body{
+	padding: 0 2em;
 }
