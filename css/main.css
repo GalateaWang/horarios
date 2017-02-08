@@ -25,11 +25,14 @@ h2, h3, td, th {
 .titulo-tabela{
 	background-color: #388E3C;
     	color: #FFFFFF;
+	font-weight: bold;
 }
 
 .break{
 	background-color: #757575;
     	color: #FFFFFF;
+	font-weight: bold;
+	letter-spacing: 25px;
 }
 
 
