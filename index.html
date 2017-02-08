@@ -22,6 +22,32 @@
 			font-family: 'Open Sans', sans-serif;
 		}
  	</style>
+	  <header>
+      <h1 class="float-l">
+        Horários - IFPB Campus Guarabira 
+      </h1>
+      
+     
+      <label for="control-nav" class="control-nav"></label>
+      <label for="control-nav" class="control-nav-close"></label>
+
+      <nav class="float-r">
+        <ul class="list-auto">
+          <li>
+            <a href="#Chaves" title="Chaves">Informática</a>
+          </li>
+          <li>
+            <a href="#Chiquinha" title="Chiquinha">Contabilidade</a>
+          </li>
+          <li>
+            <a href="#Seu-Madruga" title="Seu Madruga">Edificações</a>
+          </li>
+          <li>
+            <a href="#Quico" title="Quico">Gestão Comercial</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 	{% for curso  in site.data.horarios.cursos %}
   		<h2> {{curso.nome}} </h2>
     		{% for turma in curso.turmas %}
