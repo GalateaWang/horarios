@@ -45,7 +45,7 @@ header h1 a {
 }
 
 header ul {
-  padding: 1005px 10px 0 0;
+  padding: 15px 10px 0 0;
 }
 
 header li {
@@ -115,9 +115,7 @@ h2, h3, td, th {
 	background-color: #e8f5e9;
 }
 
-body{
-	padding: 0 2em;
-}
+
 
 .footer-distributed{
 	background-color: #292c2f;
