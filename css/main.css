@@ -120,13 +120,13 @@ h2, h3, td, th {
 
 
 .footer-distributed{
-	background-color: #292c2f;
+	background-color: #388E3C;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
-	font: bold 16px sans-serif;
-
+	font: bold 16px;
+	font-family: 'Open Sans', sans-serif;
 	padding: 55px 50px;
 	margin-top: 80px;
 }
@@ -265,7 +265,7 @@ h2, h3, td, th {
 	margin-bottom: 5px;
 }
 
-/* If you don't want the footer to be responsive, remove these media queries */
+/* Nunca remover! É o que deixa essa benção responsiva! */
 
 @media (max-width: 880px) {
 
