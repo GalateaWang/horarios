@@ -142,6 +142,7 @@ h2, h3, td, th {
 
 .footer-distributed .footer-left{
 	width: 40%;
+	
 }
 
 /* The company logo */
@@ -234,6 +235,9 @@ h2, h3, td, th {
 	font-size: 13px;
 	font-weight: normal;
 	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	color:  #ffffff;
+	text-align: justify;
 }
 
 .footer-distributed .footer-company-about span{
@@ -241,30 +245,10 @@ h2, h3, td, th {
 	color:  #ffffff;
 	font-size: 14px;
 	font-weight: bold;
-	margin-bottom: 20px;
-}
-
-.footer-distributed .footer-icons{
-	margin-top: 25px;
-}
-
-.footer-distributed .footer-icons a{
-	display: inline-block;
-	width: 35px;
-	height: 35px;
-	cursor: pointer;
-	background-color:  #33383b;
-	border-radius: 2px;
-
-	font-size: 20px;
-	color: #ffffff;
 	text-align: center;
-	line-height: 35px;
-
-	margin-right: 3px;
-	margin-bottom: 5px;
+	margin-bottom: 20px;
+	font-family: 'Open Sans', sans-serif;
 }
-
 /* Nunca remover! É o que deixa essa benção responsiva! */
 
 @media (max-width: 880px) {
