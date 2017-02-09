@@ -169,11 +169,12 @@ h2, h3, td, th {
 	text-decoration: none;
 }
 
-.footer-distributed .footer-links a{
-	display:inline-block;
-	line-height: 1.8;
-	text-decoration: none;
-	color: white;
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    text-align: center;
+    color: white;
 }
 
 .footer-distributed .footer-company-name{
