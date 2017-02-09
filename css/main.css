@@ -72,8 +72,9 @@ header li a:hover {
   color: #ffffff;
 }
 
-
-
+.espacamento{
+	padding-bottom: 8px;
+}
 
 h2 {
 	font-weight: bold;
