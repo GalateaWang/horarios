@@ -31,31 +31,32 @@
 			font-family: 'Open Sans', sans-serif;
 		}
  	</style>
-<header>
-      <h1 class="float-l", class="letra-branca">
+	  <header >
+      <h1 class="float-l">
         Horários - IFPB Campus Guarabira 
       </h1>
+      
      
-     <label for="control-nav" class="control-nav"></label>
+      <label for="control-nav" class="control-nav"></label>
       <label for="control-nav" class="control-nav-close"></label>
 
       <nav class="float-r", class="letra-branca">
         <ul class="list-auto">
           <li>
-            <a href="Informática" title="Informática">Informática</a>
+            <a href="#Chaves" title="Informatica">Informatica</a>
           </li>
           <li>
-            <a href="#Contabilidade" title="Contabilidade">Contabilidade</a>
+            <a href="#Chiquinha" title="Contabilidade">Contabilidade</a>
           </li>
           <li>
-            <a href="#Edificações" title="Edificações">Edificações</a>
+            <a href="#Seu-Madruga" title="Edificações">Edificações</a>
           </li>
           <li>
-            <a href="#Gestão Comercial" title="Gestão Comercial">Gestão Comercial</a>
+            <a href="#Quico" title="Gestão Comercial">Gestão Comercial</a>
           </li>
         </ul>
       </nav>
-</header>
+    </header>
 	{% for curso  in site.data.horarios.cursos %}
   		<h2> {{curso.nome}} </h2>
     		{% for turma in curso.turmas %}
@@ -88,30 +89,53 @@
 		<footer class="footer-distributed">
 
 			<div class="footer-left">
-				<h3>Site desenvolvido pelos alunos Daniel Medeiros e Jackson Miguel, do 4º Ano de Informática, como atividade avaliativa da disciplina de WEB</h3>
+
+				<h3>Company<span>logo</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Blog</a>
+					·
+					<a href="#">Pricing</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">Faq</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">Company Name &copy; 2015</p>
 			</div>
 
 			<div class="footer-center">
 
 				<div>
 					<i class="fa fa-map-marker"></i>
-					<p><span>Rodovia PB-057, km 2 </span> <b> Guarabira, Paraíba, Brasil </b></p>
+					<p><span>Rodovia PB-057, km 2</span> Guarabira, Paraíba, Brasil</p>
 				</div>
 
 				<div>
 					<i class="fa fa-phone"></i>
-					<p><b>+ 55 83 98195-6465</b></p>
+					<p>+55 83 98155-5545</p>
 				</div>
 
 				<div>
 					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:campus_guarabira@ifpb.edu.br"><b>campus_guarabira@ifpb.edu.br</b></a></p>
+					<p><a href="mailto:support@company.com">ifpb@edu.br</a></p>
 				</div>
 				
 				<div>
 					<i class="fa fa-facebook"></i>
-					<p><a href="https://www.facebook.com/campusifpbgba"><b>Facebook</b></a></p>
+					<p><a href="mailto:support@company.com">ifpb@edu.br</a></p>
 				</div>
+				
+				<div>
+					<i class="fa fa-at-sign"></i>
+					<p><a href="mailto:support@company.com">ifpb@edu.br</a></p>
+				</div>
+				
 
 			</div>
 
@@ -119,7 +143,7 @@
 
 				<p class="footer-company-about">
 					<span>Sobre o campus</span>
-					Criado a partir do Plano de Expansão III da Educação Profissional, do Governo Federal, foi inaugurado na capital do Brejo paraibano, no dia 10 de outubro de 2011, na forma de Núcleo Avançado, vindo a se tornar campus no dia 08 de outubro de 2013, com a publicação da Portaria 993 do Ministério da Educação. Atualmente, oferece cursos técnicos, na modalidade integrado e subsequente ao ensino Médio e superiores.
+					Criado a partir do Plano de Expansão III da Educação Profissional, do Governo Federal, foi inaugurado no dia 10 de outubro de 2011, na forma de Núcleo Avançado, vindo a se tornar campus no dia 08 de outubro de 2013, com a publicação da Portaria 993 do Ministério da Educação.
 				</p>
 
 			</div>
