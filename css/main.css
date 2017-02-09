@@ -173,6 +173,7 @@ h2, h3, td, th {
 	display:inline-block;
 	line-height: 1.8;
 	text-decoration: none;
+	color: white;
 }
 
 .footer-distributed .footer-company-name{
