@@ -58,9 +58,9 @@
       </nav>
     </header>
 	{% for curso  in site.data.horarios.cursos %}
-  		<h2> {{curso.nome}} </h2>
+  		<h2 class="espacamento"> {{curso.nome}} </h2>
     		{% for turma in curso.turmas %}
-      			<h3> {{turma.nome}} </h3>
+      			<h3 class="espacamento"> {{turma.nome}} </h3>
   			<div class="table-responsive"> 
   				<table class="table table-bordered"> 
       					<tr class = "titulo-tabela", class="formatar-tabela"> 
