@@ -282,3 +282,6 @@ h2, h3, td, th {
 
 }
 
+a{
+	text-decoration: none;
+}
