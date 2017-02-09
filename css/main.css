@@ -202,6 +202,8 @@ h2, h3, td, th {
 .footer-distributed .footer-center i.fa-envelope{
 	font-size: 17px;
 	line-height: 38px;
+	color: #ffffff;
+	
 }
 
 .footer-distributed .footer-center p{
@@ -216,11 +218,13 @@ h2, h3, td, th {
 	font-weight: normal;
 	font-size:14px;
 	line-height:2;
+	color: #ffffff;
 }
 
 .footer-distributed .footer-center p a{
-	color:  #388E3C;
-	text-decoration: none;;
+	text-decoration: none;
+	color: #ffffff;
+	
 }
 
 
