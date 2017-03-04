@@ -69,7 +69,7 @@
 								<td colspan="5" class="break"> {{linha.aulas[0].disciplina}} </td>
 							{% else %}
 								{% for aula in linha.aulas %}
-          								{% if professorg == aula.professor or professorg == "Todos" }
+          								{% if professorg == aula.professor or professorg == "Todos" %}
 										<td class="celula"> <span class="disciplina"> {{aula.disciplina}} </span> <br/> <span class="professor"> {{aula.professor}} </span> </td>
           								
 									{% else %}
