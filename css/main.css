@@ -23,6 +23,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 .list-auto, .list-auto li { width: 100%; float: left; display: block; position: relative; }
 .list-auto, .list-auto li { width: auto; }
 
+.verticalAli {
+	vertical-align: center;
+}
 
 header {
   min-height: 120px;
@@ -70,10 +73,6 @@ header li a {
 
 header li a:hover {
   color: #ffffff;
-}
-
-.verticalAli {
-	vertical-align: middle;
 }
 
 .espacamento{
