@@ -8,16 +8,22 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="apple-touch-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<script src="js/javascript.js"></script>
 	<meta name="keywords" content="horários, ifpb, guarabira, campus, professor, aluno">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    	<meta name="description" content="Site com os horários do IFPB Campus Guarabira">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  	<meta name="description" content="Site com os horários do IFPB Campus Guarabira">
 </head>
+
+<script>
+	function rivaldo(professor){
+		document.getElementById(professor).style.visibility = "visible";
+	}
+</script>
  
 <body>
   	<style>
@@ -25,33 +31,29 @@
 			font-family: 'Open Sans', sans-serif;
 		}
  	</style>
-	<script>
-	function rivaldo(professor){
-		document.getElementById(professor).style.visibility = "visible";
-	}
-</script>
-	<header>
-      		<h1 class="float-l">
-       			Horários - IFPB Campus Guarabira 
-		</h1>       
-    	</header>
-	<h2 class="espacamento"> </h2>
-	<div class="dropdown">
-<button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-    {% for professorz in site.data.mama.professores %}
-	  <p onclick="rivaldo('{{professorz}}')">{{professorz}}</p>
-	  {% endfor %}
-  </div>
+<header>
+	<h1 class="float-l">
+		Horários - IFPB Campus Guarabira 
+	</h1>       
+</header>
+<h2 class="espacamento"> </h2>
+<div class="dropdown">
+	<button onclick="myFunction()" class="dropbtn">Professores</button>
+		 <div id="myDropdown" class="dropdown-content">
+    		<input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    		{% for professorz in site.data.mama.professores %}
+	 			 <p onclick="rivaldo('{{professorz}}')">{{professorz}}</p>
+	  		{% endfor %}
+	  	</div>
 </div>
-   {% for professorg in site.data.mama.professores %}
-<div id = "{{professorg}}" style="visibility: hidden">
-	{% for curso  in site.data.horarios.cursos %}
-  		<h2 class="espacamento"> {{curso.nome}} </h2>
-    		{% for turma in curso.turmas %}
-      			<h3 class="espacamento"> {{turma.nome}} </h3>
-  			<div class="table-responsive"> 
+{% for professorg in site.data.mama.professores %}
+	<div id = "{{professorg}}" style="visibility: hidden">
+		<h1> {{professorg}} </h1>
+		{% for curso  in site.data.horarios.cursos %}
+  			<h2 class="espacamento"> {{curso.nome}} </h2>
+    			{% for turma in curso.turmas %}
+      				<h3 class="espacamento"> {{turma.nome}} </h3>
+  				<div class="table-responsive"> 
   				<table class="table table-bordered"> 
       					<tr class = "titulo-tabela", class="formatar-tabela"> 
        						{% for coluna in turma.colunas %}
@@ -132,4 +134,3 @@
 		</footer>
 </body>
 </html>
-
