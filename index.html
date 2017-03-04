@@ -45,7 +45,7 @@
 	  {% endfor %}
   </div>
 </div>
-   {%for professorg in site.data.mama.professores %}
+   {% for professorg in site.data.mama.professores %}
 <div id = "{{professorg}}" style="visibility: hidden">
 	{% for curso  in site.data.horarios.cursos %}
   		<h2 class="espacamento"> {{curso.nome}} </h2>
