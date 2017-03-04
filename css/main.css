@@ -72,6 +72,10 @@ header li a:hover {
   color: #ffffff;
 }
 
+.verticalAli {
+	vertical-align: middle;
+}
+
 .espacamento{
 	padding-bottom: 23px;
 }
