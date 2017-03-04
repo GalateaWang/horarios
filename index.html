@@ -30,6 +30,9 @@
 		</h1>       
     	</header>
 	<h2 class="espacamento"> </h2>
+   
+   {%for professorg in site.data.mama.professores %}
+<div id = "{{professorg}}" style="visibility: hidden">
 	{% for curso  in site.data.horarios.cursos %}
   		<h2 class="espacamento"> {{curso.nome}} </h2>
     		{% for turma in curso.turmas %}
@@ -50,8 +53,13 @@
 								<td colspan="5" class="break"> {{linha.aulas[0].disciplina}} </td>
 							{% else %}
 								{% for aula in linha.aulas %}
-          								<td class="celula"> <span class="disciplina"> {{aula.disciplina}} </span> <br/> <span class="professor"> {{aula.professor}} </span> </td>
-          							{% endfor %}
+          								{% if professorg == aula.professor or professorg == "Todos" }
+										<td class="celula"> <span class="disciplina"> {{aula.disciplina}} </span> <br/> <span class="professor"> {{aula.professor}} </span> </td>
+          								
+									{% else %}
+										<td class="celula"> <span class="disciplina">   </span> <br/> <span class="professor">  </span> </td>
+									{% endif %}
+								{% endfor %}
 							{% endif %}
         					</tr>
         					{% endfor %}
@@ -59,6 +67,9 @@
     			</div>
 		{% endfor %}
 	{% endfor %}
+</div>
+  {% endfor %}
+
 		<footer class="footer-distributed">
 
 			<div class="footer-left">
