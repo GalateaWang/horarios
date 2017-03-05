@@ -34,9 +34,17 @@
 	</header>
 	<h2 class="espacamento"> </h2>
 	<script>
-		function rivaldo(professor){
-			document.getElementById(professor).style.visibility = "visible";
-		}
+	function rivaldo(professor) {
+      var classes = document.getElementsByClassName("sucesso");
+      var i, davez;
+      for (i = 0; i < classes.length; i++){
+        davez = classes[i];
+        if (davez.style.display != "none"){
+          document.getElementById(davez.id).style.display = "none";
+        }
+      }
+    	document.getElementById(professor).style.display = "block";
+	}
 	</script>
 	<div class="dropdown">
 		<button onclick="myFunction()" class="dropbtn">Professores</button>
@@ -49,7 +57,7 @@
 	</div>
 	
 	{% for professorg in site.data.mama.professores %}
-		<div id="{{professorg}}" style="visibility: visible">
+		<div class="sucesso" id="{{professorg}}" style="display: none">
 	
 			{% for curso  in site.data.horarios.cursos %}
 				<h2 class="espacamento"> {{curso.nome}} </h2>
