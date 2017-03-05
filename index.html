@@ -50,7 +50,7 @@
 	
 	{% for professorg in site.data.mama.professores %}
 		<div id="{{professorg}}" style="visibility: visible">
-			<h1> {{professorg}} </h1>
+	
 			{% for curso  in site.data.horarios.cursos %}
 				<h2 class="espacamento"> {{curso.nome}} </h2>
 					{% for turma in curso.turmas %}
