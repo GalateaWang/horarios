@@ -47,14 +47,14 @@
 	  	</div>
 </div>
 {% for professorg in site.data.mama.professores %}
-	<div class="professorg" id="{{professorg}}" style="visibility: hidden">
+	<div id="{{professorg}}" style="visibility: hidden">
 		<h1> {{professorg}} </h1>
 		{% for curso  in site.data.horarios.cursos %}
   			<h2 class="espacamento"> {{curso.nome}} </h2>
     			{% for turma in curso.turmas %}
       				<h3 class="espacamento"> {{turma.nome}} </h3>
-  				<div class="table-responsive"> 
-  				<table class="table table-bordered"> 
+  					<div class="table-responsive"> 
+  					<table class="table table-bordered"> 
       					<tr class = "titulo-tabela", class="formatar-tabela"> 
        						{% for coluna in turma.colunas %}
         						<th> {{coluna}} </th>
@@ -63,20 +63,19 @@
 						{% for linha in turma.linhas %}
         					<tr>
           						<td id="horario", class = "titulo-tabela"> {{linha.horario}} </td>
-          						{% if linha.aulas[0].disciplina == "INTERVALO" 
-							or linha.aulas[0].disciplina == "ALMOÇO"
-							or linha.aulas[0].disciplina == "JANTAR" %}
+          							{% if linha.aulas[0].disciplina == "INTERVALO" 
+									or linha.aulas[0].disciplina == "ALMOÇO"
+									or linha.aulas[0].disciplina == "JANTAR" %}
 								<td colspan="5" class="break"> {{linha.aulas[0].disciplina}} </td>
 							{% else %}
 								{% for aula in linha.aulas %}
           								{% if aula.professor == professorg or professorg == "Todos" %}
-											<td class="celula"> <span class="disciplina"> {{aula.disciplina}} </span> <br/> <span class="professor"> {{aula.professor}} </span> </td>	
+											<td class="celula"> <span class="disciplina"> {{aula.disciplina}} </span> <break/> <span class="professor"> {{aula.professor}} </span> </td>	
 										{% else %}
 											<td class="celula"> <span class="disciplina">   </span> <br/> <span class="professor">  </span> </td>
 										{% endif %}
 								{% endfor %}
-        						</tr>
-        					{% endif %}	
+        						</tr>	
         					{% endfor %}
     				</table>
     			</div>
