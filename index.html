@@ -8,88 +8,89 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<script src="js/javascript.js"></script>
 	<meta name="keywords" content="horários, ifpb, guarabira, campus, professor, aluno">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-   	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  	<meta name="description" content="Site com os horários do IFPB Campus Guarabira">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta name="description" content="Site com os horários do IFPB Campus Guarabira">
 </head>
 
 
- 
+
 <body>
-  	<style>
-  		html,body,h1,h2,h3,h4,h5,h6 {
+	<style>
+		html,body,h1,h2,h3,h4,h5,h6 {
 			font-family: 'Open Sans', sans-serif;
 		}
- 	</style>
-<header>
-	<h1 class="float-l">
-		Horários - IFPB Campus Guarabira 
-	</h1>       
-</header>
-<h2 class="espacamento"> </h2>
-<script>
-	function rivaldo(professor){
-		document.getElementById(professor).style.visibility = "visible";
-	}
-</script>
-<div class="dropdown">
-	<button onclick="myFunction()" class="dropbtn">Professores</button>
-		 <div id="myDropdown" class="dropdown-content">
-    		<input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-    		{% for professorz in site.data.mama.professores %}
-	 			 <p onclick="rivaldo('{{professorz}}')">{{professorz}}</p>
-	  		{% endfor %}
-	  	</div>
-</div>
-{% for professorg in site.data.mama.professores %}
-	<div id="{{professorg}}" style="visibility: hidden">
-		<h1> {{professorg}} </h1>
-		{% for curso  in site.data.horarios.cursos %}
-  			<h2 class="espacamento"> {{curso.nome}} </h2>
-    			{% for turma in curso.turmas %}
-      				<h3 class="espacamento"> {{turma.nome}} </h3>
-  					<div class="table-responsive"> 
-  					<table class="table table-bordered"> 
-      					<tr class = "titulo-tabela", class="formatar-tabela"> 
-       						{% for coluna in turma.colunas %}
-        						<th> {{coluna}} </th>
-        					{% endfor %}
-     					</tr>
-						{% for linha in turma.linhas %}
-        					<tr>
-          						<td id="horario", class = "titulo-tabela"> {{linha.horario}} </td>
-          							{% if linha.aulas[0].disciplina == "INTERVALO" 
-									or linha.aulas[0].disciplina == "ALMOÇO"
-									or linha.aulas[0].disciplina == "JANTAR" %}
-								<td colspan="5" class="break"> {{linha.aulas[0].disciplina}} </td>
-							{% else %}
-								{% for aula in linha.aulas %}
-          								{% if aula.professor == professorg or professorg == "Todos" %}
-											<td class="celula"> <span class="disciplina"> {{aula.disciplina}} </span> <break/> <span class="professor"> {{aula.professor}} </span> </td>	
-										{% else %}
-											<td class="celula"> <span class="disciplina">   </span> <br/> <span class="professor">  </span> </td>
-										{% endif %}
-								{% endfor %}
-        						</tr>	
-        					{% endfor %}
-    				</table>
-    			</div>
+	</style>
+	<header>
+		<h1 class="float-l">
+			Horários - IFPB Campus Guarabira 
+		</h1>       
+	</header>
+	<h2 class="espacamento"> </h2>
+	<script>
+		function rivaldo(professor){
+			document.getElementById(professor).style.visibility = "visible";
+		}
+	</script>
+	<div class="dropdown">
+		<button onclick="myFunction()" class="dropbtn">Professores</button>
+		<div id="myDropdown" class="dropdown-content">
+			<input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+			{% for professorz in site.data.mama.professores %}
+			<p onclick="rivaldo('{{professorz}}')">{{professorz}}</p>
+			{% endfor %}
+		</div>
+	</div>
+	
+	{% for professorg in site.data.mama.professores %}
+		<div id="{{professorg}}" style="visibility: hidden">
+			<h1> {{professorg}} </h1>
+			{% for curso  in site.data.horarios.cursos %}
+				<h2 class="espacamento"> {{curso.nome}} </h2>
+					{% for turma in curso.turmas %}
+						<h3 class="espacamento"> {{turma.nome}} </h3>
+							<div class="table-responsive"> 
+								<table class="table table-bordered"> 
+									<tr class = "titulo-tabela", class="formatar-tabela"> 
+										{% for coluna in turma.colunas %}
+											<th> {{coluna}} </th>
+										{% endfor %}
+									</tr>
+									{% for linha in turma.linhas %}
+										<tr>
+											<td id="horario", class = "titulo-tabela"> {{linha.horario}} </td>
+											{% if linha.aulas[0].disciplina == "INTERVALO" 
+												or linha.aulas[0].disciplina == "ALMOÇO"
+												or linha.aulas[0].disciplina == "JANTAR" %}
+												<td colspan="5" class="break"> {{linha.aulas[0].disciplina}} </td>
+											{% else %}
+												{% for aula in linha.aulas %}
+													{% if aula.professor == professorg or professorg == "Todos" %}
+														<td class="celula"> <span class="disciplina"> {{aula.disciplina}} </span> <break/> <span class="professor"> {{aula.professor}} </span> </td>	
+													{% else %}
+														<td class="celula"> <span class="disciplina">   </span> <br/> <span class="professor">  </span> </td>
+													{% endif %}
+												{% endfor %}
+										</tr>	
+									{% endfor %}
+								</table>
+							</div>
+			{% endfor %}
+					{% endfor %}		
+						</div>
 		{% endfor %}
-	{% endfor %}
-</div>
-  {% endfor %}
 
-		<footer class="footer-distributed">
+	<footer class="footer-distributed">
 
-			<div class="footer-left">
+		<div class="footer-left">
 
-				<p><b>Este site foi produzido pelos alunos Daniel Medeiros e Jackson Miguel, do 4º Ano do curso técnico em Informática integrado ao Ensino Médio, sob a orientação do professor Moisés Guimarães, como componente avaliativo do 3º bimestre da disciplina de Desenvolvimento de Aplicações WEB. <b> <p>
+			<p><b>Este site foi produzido pelos alunos Daniel Medeiros e Jackson Miguel, do 4º Ano do curso técnico em Informática integrado ao Ensino Médio, sob a orientação do professor Moisés Guimarães, como componente avaliativo do 3º bimestre da disciplina de Desenvolvimento de Aplicações WEB. <b> <p>
 
 				<p class="footer-links">
 					<a href="#"> <b>↑ Topo</b></a>
@@ -131,5 +132,5 @@
 			</div>
 
 		</footer>
-</body>
-</html>
+	</body>
+	</html>
